@@ -1,240 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="mediaqueries.css">
-        <title> Personal Portfolio #1 | Project</title>
-    </head>
-    
-    <body>
-        <nav id="desktop-nav">
-            <div class="logo">Mark Anoos</div>
-            <div>
-                <ul class="nav-links">
-                    <li><a href="#profile">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <nav id="burger-nav">
-            <div class="logo">Mark Anoos</div>
-            <div class="burger-menu">
-                <div class="burger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-links">
-                    <li ><a href="#profile" onclick="toggleMenu()">Home</a></li>
-                    <li ><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li ><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                    <li ><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                    <li ><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                </div>
-            </div>
-        </nav>
-        <section id="profile">
-            <div class="section__pic-container">
-                <img src="./assets/profile-pic.png" alt="My Profile Pic">
-            </div>
-            <div class="section__text">
-                <p class="section__text__p1"> Hello, I'm</p>
-                <h1 class="title"> Mark Anoos</h1>
-                <p class="section__text__p2">Front-End Web Developer</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-1" 
-                    onclick="location.href = '#contact'"
-                    >
-                        Contact Info
-                    </button>
-                </div>
-                <div id="socials-container">
-                    <img 
-                        src="./assets/facebook.png" 
-                        alt="My Facebook profile" 
-                        class="icon" 
-                        onclick="window.open('https://www.facebook.com/Lauren.ci0?mibextid=ZbWKwL', '_blank')">
-                    <img 
-                        src="./assets/instagram.png" 
-                        alt="My Instagram profile" 
-                        class="icon" 
-                        onclick="window.open('https://www.instagram.com/lauren.cio?igsh=NzBpaDljdTAwYXVm', '_blank')">
-                </div>
-            </div>
-        </section>
-        <section id="about">
-            <p class="section__text__p1">Get To Know More</p>
-            <h1 class="title">About Me</h1>
-            <div class="section-container">
-                <div class="section__pic-container">
-                    <img 
-                        src="./assets/about-pic.png" 
-                        alt="Profile picture"
-                        class="about-pic"
-                    >
-                </div>
-                <div class="about__details-container">
-                    <div class="about-containers">
-                        <div class="details-container">
-                            <img 
-                                src="./assets/experience.png" 
-                                alt="Experience icon"
-                                class="icon"
-                            >
-                            <h3>Experience</h3>
-                            <p>1 Year <br> Front-End Developer</p>
-                        </div>
-                        <div class="details-container">
-                            <img 
-                                src="./assets/education.png" 
-                                alt="Experience icon"
-                                class="icon"
-                            >
-                            <h3>Education</h3>
-                            <p>Bachelor of Science in Information Technology</p>
-                        </div>
-                    </div>
-                    <div class="text-container">
-                        <p>
-                            My name is Mark Laurence Cacanog Anoos, a 2nd year student that is currently studying 
-                            at Cebu Technological University - Danao Campus. Aspiring to be Full time Web Developer. 
-                            And a member of Alliance of Coder(AOC), with members more than a hundred. Also love to, 
-                            read during free time, and sometimes play video games to release pent up stress.
 
-                        </p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mark Anoos — Web Developer portfolio showcasing projects, skills, and experience in full-stack web development.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <title>Mark Anoos | Web Developer Portfolio</title>
+</head>
+
+<body>
+    <!-- Desktop Navigation -->
+    <nav id="desktop-nav">
+        <div class="logo">Mark Anoos</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#profile" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+                <!-- Moon icon (shown in dark mode) -->
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0112.478 3.68a9.75 9.75 0 109.274 11.322z" />
+                </svg>
+                <!-- Sun icon (shown in light mode) -->
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1.5M12 19.5V21M4.219 4.219l1.061 1.061M17.72 17.72l1.06 1.06M3 12h1.5M19.5 12H21M4.219 19.781l1.061-1.061M17.72 6.28l1.06-1.06" />
+                    <circle cx="12" cy="12" r="3.75" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav id="burger-nav">
+        <div class="logo">Mark Anoos</div>
+        <div class="burger-menu">
+            <button class="theme-toggle" id="theme-toggle-mobile" aria-label="Toggle dark/light mode">
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0112.478 3.68a9.75 9.75 0 109.274 11.322z" />
+                </svg>
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1.5M12 19.5V21M4.219 4.219l1.061 1.061M17.72 17.72l1.06 1.06M3 12h1.5M19.5 12H21M4.219 19.781l1.061-1.061M17.72 6.28l1.06-1.06" />
+                    <circle cx="12" cy="12" r="3.75" />
+                </svg>
+            </button>
+            <div class="burger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Profile Section -->
+    <section id="profile">
+        <div class="hero-img-container">
+            <div class="hero-img-ring">
+                <img src="./assets/pictures/profile_pic.JPG" alt="Mark Anoos — Profile Photo">
+            </div>
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="hero-title gradient-text">Mark Anoos</h1>
+            <p class="hero-subtitle">Web Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-primary" onclick="location.href='#contact'">
+                    Contact Me
+                </button>
+                <button class="btn btn-secondary" onclick="location.href='#projects'">
+                    View Projects
+                </button>
+            </div>
+            <div id="socials-container">
+                <a href="https://www.facebook.com/Lauren.ci0?mibextid=ZbWKwL" target="_blank" class="social-link" aria-label="Facebook">
+                    <img src="./assets/socials/facebook.png" alt="Facebook" style="width: 1.5rem; height: 1.5rem; object-fit: contain;">
+                </a>
+                <a href="https://www.instagram.com/lauren.cio?igsh=NzBpaDljdTAwYXVm" target="_blank" class="social-link" aria-label="Instagram">
+                    <img src="./assets/socials/instagram.png" alt="Instagram" style="width: 1.5rem; height: 1.5rem; object-fit: contain;">
+                </a>
+                <a href="https://github.com/lauren-cio" target="_blank" class="social-link" aria-label="GitHub">
+                    <img src="./assets/socials/github.png" alt="GitHub" style="width: 1.5rem; height: 1.5rem; object-fit: contain;">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="reveal">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="about-pic-container">
+                <img src="./assets/pictures/about_me.JPG" alt="About me picture" class="about-pic">
+            </div>
+            <div class="about__details-container">
+                <div class="about-containers reveal-children">
+                    <div class="details-container glass-card">
+                        <div class="detail-icon">
+                            <img src="./assets/about/experience.png" alt="experience" class="about-icon">
+                        </div>
+                        <h3>Experience</h3>
+                        <p>6 months - Backend Developer</p>
+                        <p>Biometric Integrated Tracking System</p>
+                    </div>
+                    <div class="details-container glass-card">
+                        <div class="detail-icon">
+                            <img src="./assets/about/education.png" alt="education" class="about-icon">
+                        </div>
+                        <h3>Education</h3>
+                        <p>Bachelor of Science in Information Technology</p>
                     </div>
                 </div>
+                <div class="text-container">
+                    <p>
+                        My name is Mark Laurence Cacanog Anoos, a fresh graduate of BSIT that is currently searching
+                        for a job. Aspiring to be Full time Web Developer. I consider myself a quick learner,
+                        and a team player. I'm also open to learning new things and technologies to improve myself.
+                    </p>
+                </div>
             </div>
-            <img 
-                src="./assets/arrow.png" 
-                alt="Arrow icon" 
-                class="icon arrow" 
-                onclick="location.href='#experience'">
-        </section>
-        <section id="experience">
-            <p class="section__text__p1">Explore My</p>
-            <h1 class="title">Experience</h1>
-            <div class="section-container">
-                <div class="experience-details-container">
-                    <div class="about-containers">
-                        <div class="details-container">
-                            <h2 class="experience-sub-title">Front-End Developer</h2>
-                            <div class="article-container">
-                                <article>
-                                    <img 
-                                        src="assets/checkmark.png" 
-                                        alt="Experience icon"
-                                        class="experience-icon"
-                                    >
-                                    <div>
-                                        <h3>HTML</h3>
-                                        <p>Intermediate</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img 
-                                        src="assets/checkmark.png" 
-                                        alt="Experience icon"
-                                        class="experience-icon"
-                                    >
-                                    <div>
-                                        <h3>CSS</h3>
-                                        <p>Intermediate</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img 
-                                        src="assets/checkmark.png" 
-                                        alt="Experience icon"
-                                        class="experience-icon"
-                                    >
-                                    <div>
-                                        <h3>JavaScript</h3>
-                                        <p>Basic</p>
-                                    </div>
-                                </article>
+        </div>
+    </section>
+
+    <!-- Tech Stack / Experience Section -->
+    <section id="experience" class="reveal">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Tech Stack</h1>
+        <div class="experience-details-container">
+            <div class="skill-category">
+                <h3 class="skill-category-title">Frontend</h3>
+                <div class="skills-grid reveal-children">
+                    <div class="skill-badge glass-card">
+                        <img class="skill-icon" src="./assets/techstack/html.png" alt="HTML">
+                        <div class="skill-info">
+                            <h3>HTML</h3>
+                            <div class="proficiency">
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-badge glass-card">
+                        <img class="skill-icon" src="./assets/techstack/css.png" alt="CSS">
+                        <div class="skill-info">
+                            <h3>CSS</h3>
+                            <div class="proficiency">
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-badge glass-card">
+                        <img class="skill-icon" src="./assets/techstack/tailwind.png" alt="Tailwind">
+                        <div class="skill-info">
+                            <h3>Tailwind</h3>
+                            <div class="proficiency">
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-badge glass-card">
+                        <img class="skill-icon" src="./assets/techstack/javascript.png" alt="JavaScript">
+                        <div class="skill-info">
+                            <h3>JavaScript</h3>
+                            <div class="proficiency">
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        <img 
-            src="./assets/arrow.png" 
-            alt="Arrow icon" 
-            class="icon arrow" 
-            onclick="location.href='#projects'">    
-        </section>
-        <section id="projects">
-            <p class="section__text__p1">Browse My Recent</p>
-            <h1 class="title">Projects</h1>
-            <div class="experience-details-container">
-                <div class="about-containers">
-                    <div class="details-container color-container">
-                    <div class="article-container">
-                        <img 
-                            src="./assets/project-2.png" 
-                            alt="Project 2" 
-                            class="project-img">
+            <div class="skill-category">
+                <h3 class="skill-category-title">Backend</h3>
+                <div class="skills-grid reveal-children">
+                    <div class="skill-badge glass-card">
+                        <img class="skill-icon" src="./assets/techstack/php.png" alt="PHP">
+                        <div class="skill-info">
+                            <h3>PHP</h3>
+                            <div class="proficiency">
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
                     </div>
-                    <h2 class="experience-sub-title project-title">Project One</h2>
+                    <div class="skill-badge glass-card">
+                        <img class="skill-icon" src="./assets/techstack/mysql.png" alt="MySQL">
+                        <div class="skill-info">
+                            <h3>MySQL</h3>
+                            <div class="proficiency">
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                    </div><div class="skill-badge glass-card">
+                        <img class="skill-icon" src="./assets/techstack/postgresql.png" alt="PostgreSQL">
+                        <div class="skill-info">
+                            <h3>PostgreSQL</h3>
+                            <div class="proficiency">
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="details-container color-container">
-                    <div class="article-container">
-                        <img 
-                            src="./assets/project-3.png" 
-                            alt="Project 3" 
-                            class="project-img">
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3 class="skill-category-title">Tools & Other</h3>
+                <div class="skills-grid reveal-children">
+                    <div class="skill-badge glass-card">
+                        <img class="skill-icon" src="./assets/techstack/github.png" alt="GitHub">
+                        <div class="skill-info">
+                            <h3>GitHub</h3>
+                            <div class="proficiency">
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
                     </div>
-                    <h2 class="experience-sub-title project-title">Project Two</h2>
+                    <div class="skill-badge glass-card">
+                        <img class="skill-icon" src="./assets/techstack/git.png" alt="Git">
+                        <div class="skill-info">
+                            <h3>Git</h3>
+                            <div class="proficiency">
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-badge glass-card">
+                        <img class="skill-icon" src="./assets/techstack/vscode.png" alt="VS Code">
+                        <div class="skill-info">
+                            <h3>VS Code</h3>
+                            <div class="proficiency">
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-badge glass-card">
+                        <img class="skill-icon" src="./assets/techstack/antigravity.png" alt="Antigravity">
+                        <div class="skill-info">
+                            <h3>Antigravity</h3>
+                            <div class="proficiency">
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot filled"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-            <img 
-                src="./assets/arrow.png" 
-                alt="Arrow icon" 
-                class="icon arrow" 
-                onclick="location.href='#contact'">
-        </section>
-        <section id="contact">
-            <p class="section__text__p1">Get in Touch</p>
-            <h1 class="title">Contact Me</h1>
-            <div class="contact-info-upper-container">
-                <div class="contact-info-container">
-                    <img 
-                        src="./assets/instagram.png" 
-                        alt="Instagram icon" 
-                        class="icon contact-icon"/>
-                    <p><a href="https://www.instagram.com/lauren.cio?igsh=NzBpaDljdTAwYXVm" target="_blank">Instragram</a></p>
-                </div>
-                <div class="contact-info-container">
-                    <img 
-                        src="./assets/facebook.png" 
-                        alt="Facebookicon" 
-                        class="icon contact-icon"/>
-                    <p><a href="https://www.facebook.com/Lauren.ci0?mibextid=ZbWKwL" target="_blank">Facebook</a></p>
-                </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="reveal">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="projects-grid reveal-children" style="grid-template-columns: 1fr;">
+            <div class="project-card glass-card" style="text-align: center; padding: 4rem 2rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 4rem; height: 4rem; margin: 0 auto 1rem; color: var(--accent-1);">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.83M11.42 15.17l3.86-3.86a2.25 2.25 0 00-3.182-3.182l-3.86 3.86m3.182 3.182l-3.86 3.86a2.25 2.25 0 01-3.182-3.182l3.86-3.86m-3.182 3.182L5.25 21 3 21l0-2.25 1.57-1.57M15.28 8.83l1.171-1.17a2.25 2.25 0 000-3.182L15.28 3.3m0 5.53l-1.17-1.171a2.25 2.25 0 010-3.182l1.17-1.17" />
+                </svg>
+                <h2 class="project-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Under Work / Revisions</h2>
+                <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto;">
+                    I'm currently updating my project portfolio to showcase my latest work. Please check back soon!
+                </p>
             </div>
-        </section>
-        <footer>
-            <nav>
-                <div class="nav-links-container">
-                    <ul class="nav-links">
-                        <li ><a href="#profile">Home</a></li>
-                        <li ><a href="#about">About</a></li>
-                        <li ><a href="#experience">Experience</a></li>
-                        <li ><a href="#projects">Projects</a></li>
-                        <li ><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <p>Copyright &#169; 2023 Mark Anoos. All Rights Reserved.</p>
-        </footer>
-        <script src="script.js"></script>
-    </body>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="reveal">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-cta">
+            <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
+        </div>
+        <div class="contact-info-upper-container glass-card">
+            <div class="contact-info-container">
+                <img src="./assets/socials/instagram.png" alt="Instagram" class="contact-icon" style="object-fit: contain;">
+                <p><a href="https://www.instagram.com/lauren.cio?igsh=NzBpaDljdTAwYXVm" target="_blank">Instagram</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/socials/facebook.png" alt="Facebook" class="contact-icon" style="object-fit: contain;">
+                <p><a href="https://www.facebook.com/Lauren.ci0?mibextid=ZbWKwL" target="_blank">Facebook</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/socials/github.png" alt="GitHub" class="contact-icon" style="object-fit: contain;">
+                <p><a href="https://github.com/lauren-cio" target="_blank">GitHub</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#profile" class="back-to-top" aria-label="Back to top">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+            </svg>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#profile">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <p>Copyright &#169; 2025 Mark Anoos. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
 </html>

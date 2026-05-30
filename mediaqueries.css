@@ -1,100 +1,219 @@
-@media screen and (max-width: 1900px) {
-    #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-    }
-    .about-containers {
-      flex-wrap: wrap;
-    }
-  }
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
 
-@media  screen and (max-width: 1200px) {
+/* --- Tablet & Below (≤1200px) --- */
+@media screen and (max-width: 1200px) {
     #desktop-nav {
         display: none;
     }
+
     #burger-nav {
         display: flex;
     }
-    #experience, 
-    .experience-details-container{
-        margin: 2rem;
+
+    #profile {
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: calc(var(--nav-height) + 3rem);
+        text-align: center;
     }
-    #profile, 
-    .section-container{
-        display: block;
+
+    .hero-img-ring {
+        width: 250px;
+        height: 250px;
     }
-    .arrow{
-        display: none;
+
+    .hero-title {
+        font-size: 2.8rem;
     }
-    section, 
-    .section-container{
-        height: fit-content;
+
+    .section-container {
+        flex-direction: column;
+        gap: 2rem;
     }
-    section{
-        margin: 0.5%;
+
+    .about-pic-container {
+        display: flex;
+        justify-content: center;
     }
-    .section__pic-container{
-        width: 275px;
-        height: 275px;
-        margin: 0 auto 2rem;
+
+    .about-pic {
+        width: 280px;
+        height: 280px;
     }
-    .about-containers{
-        margin-top: 0;
+
+    .about-containers {
+        flex-direction: column;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section {
+        padding: 5rem 1.5rem 3rem;
+        min-height: auto;
     }
 }
 
-@media  screen and (max-width: 600px) {
-    #contact, 
-    footer{
-        height: 40vh;
+/* --- Large Phone (≤768px) --- */
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 2.2rem;
     }
-    #profile{
-        height: 83vh;
-        margin-bottom: 0;
+
+    .hero-title {
+        font-size: 2.4rem;
     }
-    article{
-        font-size: 1rem;
+
+    .hero-subtitle {
+        font-size: 1.1rem;
     }
-    footer nav{
-        height: fit-content;
-        margin-bottom: 2rem;
+
+    .hero-img-ring {
+        width: 220px;
+        height: 220px;
     }
-    .about-containers 
-    .contact-info-upper-container, 
-    .btn-container{
+
+    .section__text__p1 {
+        font-size: 0.85rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .about-pic {
+        width: 240px;
+        height: 240px;
+    }
+
+    .text-container p {
+        text-align: center;
+    }
+
+    .contact-info-upper-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .contact-info-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    footer .nav-links {
         flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
     }
-    .contact-info-container{
-        margin: 1;
+
+    section {
+        padding: 4rem 1rem 2.5rem;
     }
-    .contact-info-container p, 
-    .nav-links li a{
+}
+
+/* --- Small Phone (≤480px) --- */
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
         font-size: 1rem;
     }
-    .experience-sub-title{
-        font-size: 1.25rem;
+
+    .hero-img-ring {
+        width: 180px;
+        height: 180px;
     }
-    .logo{
-        font-size: 1.5rem;
+
+    .section__text__p2 {
+        font-size: 1.15rem;
     }
-    .nav-links{
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .about-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+    }
+
+    .skill-badge {
+        padding: 0.65rem 0.75rem;
+        gap: 0.5rem;
+    }
+
+    .skill-badge .skill-info h3 {
+        font-size: 0.8rem;
+    }
+
+    .skill-icon {
+        font-size: 1.2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-content {
+        padding: 1rem;
+    }
+
+    .project-title {
+        font-size: 1.05rem;
+    }
+
+    #socials-container {
+        gap: 0.75rem;
+    }
+
+    .social-link {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .contact-cta p {
+        font-size: 0.9rem;
+    }
+
+    footer .nav-links {
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
     }
-    .section__pic-container{
-        width: auto;
-        height: 46vw;
-        justify-content: center;
-    }
-    .section__text__p2{
-        font-size: 1.25rem;
-    }
-    .title{
-        font-size: 2rem;
-    }
-    .text-container{
-        text-align: justify;
+
+    section {
+        padding: 3.5rem 0.75rem 2rem;
     }
 }
-    
